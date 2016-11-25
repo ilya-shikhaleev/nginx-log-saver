@@ -69,9 +69,9 @@ func parseRequest(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, "I'm ready!")
 }
 
-func main() {
-	defer log.Println("Application is closed.")
+func main() {	
 	log.Println("Application is started.")
+	defer log.Println("Application is closed.")
 	http.HandleFunc("/", parseRequest)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))	
 }
