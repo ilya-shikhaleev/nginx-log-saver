@@ -73,5 +73,5 @@ func main() {
 	log.Println("Application is started.")
 	defer log.Println("Application is closed.")
 	http.HandleFunc("/", parseRequest)
-	log.Fatal(http.ListenAndServe(":8080", nil))	
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
